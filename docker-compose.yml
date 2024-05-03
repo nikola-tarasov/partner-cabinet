@@ -8,8 +8,6 @@ services:
         db:
                 image: mysql
                 restart: always
-                volumes:
-                        - . /basedata
                 environment:
                         MYSQL_ROOT_PASSWORD: example
 

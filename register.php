@@ -19,7 +19,7 @@ error_reporting(-1);
     <div class="row justify-content-center">
         <div class="col-md-4 mt-5 ">
     <!-- Контент здесь -->
-            <form>
+            <form method="post" action="hadler-register.php">
                 <div class="mb-3">
                     <label for="name" class="form-label">Ваше имя </label>
                     <input type="text" name="name" class="form-control" id="name" aria-describedby="">
@@ -30,7 +30,7 @@ error_reporting(-1);
                 </div>
                 <div class="mb-3">
                     <label for="login" class="form-label">Ваш логин </label>
-                    <input type="text" name="lastname" class="form-control" id="name" aria-describedby="">
+                    <input type="text" name="login" class="form-control" id="name" aria-describedby="">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Введите вашу почту </label>

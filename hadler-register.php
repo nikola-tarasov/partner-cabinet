@@ -10,7 +10,9 @@ $root = "root";
 
 $password = "example";
 
-$host =  "mysql:host=31.129.104.236";
+$host =  "31.129.104.236";
+
+$dbname = "personal";
 
 
 $name = $_POST['name'];
@@ -22,14 +24,9 @@ $pass = $_POST['pass'];
 
 
 
-try {
-    // подключаемся к серверу
-    $conn = new PDO($host, $root, $password);
-    echo "Database connection established";
-}
-catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+
+// подключаемся к серверу
+$conn = new PDO("mysql:host=$host;dbname=$host", $root, $password);
 
 $query = "INSERT INTO users (name, surname, login, email, password) VALUES ($name, $surname, $login, $email, $pass)";
 

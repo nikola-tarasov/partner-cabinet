@@ -10,7 +10,7 @@ $root = "root";
 
 $password = "example";
 
-$host =  "31.129.104.236";
+$host =  "db";
 
 $dbname = "personal";
 
@@ -24,13 +24,19 @@ $pass = $_POST['pass'];
 
 
 
+$query = "INSERT INTO users (name, surname, login, email, password) VALUES ('jonn', 'jons', 'lol', 'dio@mail.com', '123')";
+
+$conn = new mysqli($host, $root, $password);
+
+
+
+$conn->query($query);
 
 // подключаемся к серверу
-$conn = new PDO("mysql:host=$host;dbname=$host", $root, $password);
-
-$query = "INSERT INTO users (name, surname, login, email, password) VALUES ($name, $surname, $login, $email, $pass)";
-
-$conn->exec($query);
+//$conn = new PDO("mysql:host=$host;dbname=$host", $root, $password);
+//
+//
+//$conn->query($query);
 
 
 ?>

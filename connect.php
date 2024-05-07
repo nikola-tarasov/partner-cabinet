@@ -6,7 +6,9 @@
 //
 //$host =  "mysql:host=31.129.104.236";
 
-
+1q
+`3q`
+                                                                                                                    ``
 //try {
 //    // подключаемся к серверу
 //    $conn = new PDO($host, $root, $password);

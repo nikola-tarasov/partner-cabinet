@@ -1,7 +1,7 @@
 <?php
 error_reporting(-1);
 
-require 'hadler-register.php';
+
 
 ?>
 
@@ -22,26 +22,30 @@ require 'hadler-register.php';
     <div class="row justify-content-center">
         <div class="col-md-4 mt-5 ">
     <!-- Контент здесь -->
-            <form method="post">
+            <form method="post" action="hadler-register.php">
                 <div class="mb-3">
                     <label for="name" class="form-label">Ваше имя </label>
-                    <input type="text" name="name" class="form-control" id="name" aria-describedby="">
+                    <input type="text" name="name" class="form-control" id="name" aria-describedby=""  required>
                 </div>
                 <div class="mb-3">
                     <label for="surname" class="form-label">Ваше фамилия </label>
-                    <input type="text" name="surname" class="form-control" id="surname" aria-describedby="">
+                    <input type="text" name="surname" class="form-control" id="surname" aria-describedby="" required>
                 </div>
                 <div class="mb-3">
                     <label for="login" class="form-label">Ваш логин </label>
-                    <input type="text" name="login" class="form-control" id="name" aria-describedby="">
+                    <input type="text" name="login" class="form-control" id="name" aria-describedby="" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Введите вашу почту </label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1">
+                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPhone" class="form-label">Ваш телефон</label>
+                    <input type="text" id="phone" name="phone"  class="form-control" id="exampleInputPhone" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
             </form>

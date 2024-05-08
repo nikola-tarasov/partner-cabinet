@@ -1,18 +1,20 @@
 <?php
 error_reporting(-1);
 
-//include 'connect.php';
+include 'connect.php';
 
 
 
 
-$root = "root";
+//$root = "root";
+//
+//$password = "example";
+//
+//$host =  "db";
+//
+//$dbname = "personal";
 
-$password = "example";
 
-$host =  "db";
-
-$dbname = "personal";
 
 
 $name = $_POST['name'];
@@ -24,13 +26,13 @@ $pass = $_POST['pass'];
 
 
 
-$query = "INSERT INTO users (name, surname, login, email, password) VALUES ('jonn', 'jons', 'lol', 'dio@mail.com', '123')";
+$query = "INSERT INTO users (name, surname, login, email, password) VALUES ('$name', '$surname', '$login', '$email', '$pass')";
 
-$conn = new mysqli($host, $root, $password);
-
-
+//$conn = new mysqli($host, $root, $password, $dbname);
 
 $conn->query($query);
+
+header('Location: http:partner_cabinet.php');
 
 // подключаемся к серверу
 //$conn = new PDO("mysql:host=$host;dbname=$host", $root, $password);

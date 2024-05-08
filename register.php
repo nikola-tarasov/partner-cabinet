@@ -1,5 +1,8 @@
 <?php
 error_reporting(-1);
+
+require 'hadler-register.php';
+
 ?>
 
 
@@ -19,7 +22,7 @@ error_reporting(-1);
     <div class="row justify-content-center">
         <div class="col-md-4 mt-5 ">
     <!-- Контент здесь -->
-            <form method="post" action="hadler-register.php">
+            <form method="post">
                 <div class="mb-3">
                     <label for="name" class="form-label">Ваше имя </label>
                     <input type="text" name="name" class="form-control" id="name" aria-describedby="">

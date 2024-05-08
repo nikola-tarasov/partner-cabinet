@@ -1,20 +1,14 @@
 <?php
 
-//$root = "root";
-//
-//$password = "example";
-//
-//$host =  "mysql:host=31.129.104.236";
+$root = "root";
 
-1q
-`3q`
-                                                                                                                    ``
-//try {
-//    // подключаемся к серверу
-//    $conn = new PDO($host, $root, $password);
-//    echo "Database connection established";
-//}
-//catch (PDOException $e) {
-//    echo "Connection failed: " . $e->getMessage();
-//}
+$password = "example";
+
+$host =  "db";
+
+$dbname = "personal";
+
+$conn = new mysqli($host, $root, $password, $dbname);
+
+
 

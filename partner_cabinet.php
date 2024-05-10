@@ -45,8 +45,7 @@ error_reporting(-1);
         </div>
 </div>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-5 mt-5 ">
+    <div class="row justify-content-center mt-5">
             <table class="table table-dark table-striped">
                 <thead>
                 <tr>
@@ -67,7 +66,6 @@ error_reporting(-1);
                 </tr>
                 </tbody>
             </table>
-        </div>
     </div>
 </div>
 

@@ -3,6 +3,14 @@ error_reporting(-1);
 
 
 
+require 'handler-partner-registrathion.php';
+
+require 'connect.php';
+
+
+
+
+
 
 ?>
 
@@ -21,7 +29,7 @@ error_reporting(-1);
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 mt-5 ">
-            <form>
+            <form method="post" action="/" >
                 <div class="mb-3">
                     <label for="exampleInputFIO" class="form-label">ФИО потенциального клиента</label>
                     <input type="text" name="fioClient" class="form-control" id="exampleInputFIO" aria-describedby="emailHelp">
@@ -54,17 +62,28 @@ error_reporting(-1);
                     <th scope="col">Фамилия</th>
                     <th scope="col">Телефон</th>
                     <th scope="col">Статус</th>
+                    <th scope="col">Комментарий</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Иван</td>
-                    <td>Иванов</td>
-                    <td>89507776611</td>
-                    <td>Готов</td>
-                </tr>
-                </tbody>
+                <?php
+                    $sql = "SELECT * FROM leads;";
+
+                    $resultLeads = $conn->query($sql);
+                        if ($resultLeads) {
+                            foreach ($resultLeads as $row) {
+                                echo '<tbody>
+                                    <tr>
+                                        <th scope="row">' . $row['id'] . '</th>
+                                        <td>' . $row['name'] . '</td>
+                                        <td>' . $row['surname'] . '</td>
+                                        <td>' . $row['phone'] . '</td>
+                                        <td>' . $row['status'] . '</td>
+                                        <td>' . $row['comment'] . '</td>
+                                    </tr>
+                            </tbody>';
+                            }
+                        }
+                ?>
             </table>
     </div>
 </div>

@@ -2,7 +2,7 @@
 //define('C_REST_CLIENT_ID','local.5c8bb1b0891cf2.87252039');//Application ID
 //define('C_REST_CLIENT_SECRET','SakeVG5mbRdcQet45UUrt6q72AMTo7fkwXSO7Y5LYFYNCRsA6f');//Application key
 // or
-define('C_REST_WEB_HOOK_URL','https://b24-3qg2vf.bitrix24.ru/rest/1/0dvzck7l2839dt9d/');//url on creat Webhook без метода
+define('C_REST_WEB_HOOK_URL','https://b24-3qg2vf.bitrix24.ru/rest/1/gwf1vmjd7txo3uee/');//url on creat Webhook без метода
 
 //define('C_REST_CURRENT_ENCODING','windows-1251');
 //define('C_REST_IGNORE_SSL',true);//turn off validate ssl by curl

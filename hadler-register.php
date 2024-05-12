@@ -5,12 +5,37 @@ include 'connect.php';
 require 'crest.php';
 
 
-$name = $_POST['name'];
-$surname = $_POST['surname'];
-$login = $_POST['login'];
-$email = $_POST['email'];
-$pass = $_POST['pass'];
-$phone = $_POST['phone'];
+
+if (isset($_POST['name'])){
+    $name = $_POST['name'];
+}
+
+if (isset($_POST['surname'])){
+    $surname = $_POST['surname'];
+}
+
+if (isset($_POST['login'])){
+    $login = $_POST['login'];
+}
+
+if (isset($_POST['email'])){
+    $email = $_POST['email'];
+}
+
+if (isset($_POST['pass'])){
+    $pass = $_POST['pass'];
+}
+
+if (isset($_POST['phone'])){
+    $phone = $_POST['phone'];
+}
+
+//$name = $_POST['name'];
+//$surname = $_POST['surname'];
+//$login = $_POST['login'];
+//$email = $_POST['email'];
+//$pass = $_POST['pass'];
+//$phone = $_POST['phone'];
 
 $postData = [
     "NAME" => $name ,
@@ -29,6 +54,8 @@ $result = crest::call('crm.contact.add',['fields' => $postData ]);
 $query = "INSERT INTO users (name, surname, login, email, password, phone, id_partner) VALUES ('$name', '$surname', '$login', '$email', '$pass', '$phone', $id_partner)";
 
 $conn->query($query);
+
+$conn->close();
 
 
 

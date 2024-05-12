@@ -3,7 +3,7 @@ error_reporting(-1);
 
 
 
-require 'handler-partner-registrathion.php';
+
 
 require 'connect.php';
 
@@ -29,7 +29,7 @@ require 'connect.php';
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 mt-5 ">
-            <form method="post" action="/" >
+            <form method="post" action="handler-partner-registrathion.php" >
                 <div class="mb-3">
                     <label for="exampleInputFIO" class="form-label">ФИО потенциального клиента</label>
                     <input type="text" name="fioClient" class="form-control" id="exampleInputFIO" aria-describedby="emailHelp">
@@ -69,7 +69,7 @@ require 'connect.php';
                     $sql = "SELECT * FROM leads;";
 
                     $resultLeads = $conn->query($sql);
-                        if ($resultLeads) {
+                        if ( is_object($resultLeads)) {
                             foreach ($resultLeads as $row) {
                                 echo '<tbody>
                                     <tr>
@@ -83,6 +83,7 @@ require 'connect.php';
                             </tbody>';
                             }
                         }
+                        $conn->close();
                 ?>
             </table>
     </div>

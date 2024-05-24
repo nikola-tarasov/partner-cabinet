@@ -9,6 +9,13 @@ services:
 
 
 
+        event-handler:
+
+                build: ./event-handler
+                volumes:
+                        - ./event-handler:/event-handler
+                ports:
+                        - 5000:5000
 
 
 
@@ -16,8 +23,7 @@ services:
                 image: mysql
                 volumes:
                         - ./basedata:/var/lib/mysql
-                ports:
-                        - 3306:3306
+
                 restart: always
                 environment:
                         MYSQL_ROOT_PASSWORD: example

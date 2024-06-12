@@ -1,12 +1,15 @@
 FROM python:3.8
 
-COPY . /event_handler
+WORKDIR /usr/src/app
 
-WORKDIR ./event_handler
 
-RUN pip install -r requirements.txt
+RUN pip install mysql-connector-python
 
-CMD python app.py
+RUN pip install Flask
+
+COPY . .
+
+CMD ["python3", "-u", "app.py"]
 
 
 

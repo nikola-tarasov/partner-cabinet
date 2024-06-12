@@ -30,12 +30,12 @@ if (isset($_POST['phone'])){
     $phone = $_POST['phone'];
 }
 
-//$name = $_POST['name'];
-//$surname = $_POST['surname'];
-//$login = $_POST['login'];
-//$email = $_POST['email'];
-//$pass = $_POST['pass'];
-//$phone = $_POST['phone'];
+$name = $_POST['name'];
+$surname = $_POST['surname'];
+$login = $_POST['login'];
+$email = $_POST['email'];
+$pass = $_POST['pass'];
+$phone = $_POST['phone'];
 
 $postData = [
     "NAME" => $name ,
@@ -51,7 +51,7 @@ $result = crest::call('crm.contact.add',['fields' => $postData ]);
 
 
 
-$query = "INSERT INTO users (name, surname, login, email, password, phone, id_partner) VALUES ('$name', '$surname', '$login', '$email', '$pass', '$phone', $id_partner)";
+$query = "INSERT INTO users (name, surname, login, email, password, phone) VALUES ('$name', '$surname', '$login', '$email', '$pass', '$phone')";
 
 $conn->query($query);
 

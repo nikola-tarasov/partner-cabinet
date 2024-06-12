@@ -1,7 +1,17 @@
 <?php
+session_start();
+
+
+
+
 error_reporting(-1);
 
 
+
+
+if (empty($_SESSION['user'])){
+    header('Location: /');
+}
 
 
 
@@ -13,6 +23,7 @@ require 'connect.php';
 
 
 ?>
+
 
 
 <!doctype html>
@@ -48,6 +59,7 @@ require 'connect.php';
                     <input type="text" name="comment" class="form-control" id="exampleInputComment">
                 </div>
                 <button type="submit" class="btn btn-primary">Отправить данные</button>
+                <a href="/logout.php">Выход из личного кабинета</a>
             </form>
          </div>
         </div>
@@ -61,6 +73,7 @@ require 'connect.php';
                     <th scope="col">Имя</th>
                     <th scope="col">Фамилия</th>
                     <th scope="col">Телефон</th>
+                    <th scope="col">Звонок состоялся?</th>
                     <th scope="col">Статус</th>
                     <th scope="col">Комментарий</th>
                 </tr>
@@ -77,8 +90,9 @@ require 'connect.php';
                                         <td>' . $row['name'] . '</td>
                                         <td>' . $row['surname'] . '</td>
                                         <td>' . $row['phone'] . '</td>
+                                        <td>Да/нет</td>
                                         <td>' . $row['status'] . '</td>
-                                        <td>' . $row['comment'] . '</td>
+                                     <td>комментарии менеджера</td>
                                     </tr>
                             </tbody>';
                             }

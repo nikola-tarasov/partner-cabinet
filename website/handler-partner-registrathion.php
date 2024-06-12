@@ -52,9 +52,8 @@ if(!empty($fio) and !empty($phoneClient) and !empty($emailClient) and !empty($co
 
     $conn->close();
 
-
-
 }
-    header('Location: http:partner_cabinet.php');
+    header('Location: /partner_cabinet.php');
+
 
 

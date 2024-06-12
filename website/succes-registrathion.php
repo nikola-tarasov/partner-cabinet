@@ -17,7 +17,7 @@ error_reporting(-1);
     <div class="row justify-content-center">
         <div class="col-md-4 mt-5 ">
             <h1>Вы успешно зарегистировались!Теперь можете перейти в личный кабинет</h1>
-            <a href="/partner_cabinet.php"><h2>Перейти в ЛК</h2></a>
+            <a href="/"><h2>Перейти в ЛК</h2></a>
         </div>
     </div>
 </div>

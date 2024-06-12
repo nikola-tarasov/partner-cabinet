@@ -1,5 +1,14 @@
 <?php
+session_start();
+
+
 error_reporting(-1);
+
+
+if(!empty($_SESSION['user'])){
+    header('Location: /partner_cabinet.php');
+}
+
 ?>
 
 
@@ -19,7 +28,7 @@ error_reporting(-1);
     <div class="row justify-content-center">
         <div class="col-md-4 mt-5 ">
             <!-- Контент здесь -->
-            <form>
+            <form method="post", action="handler-authorization.php">
                 <div class="mb-3">
                     <label for="exampleInputLogin" class="form-label">Логин</label>
                     <input type="text" name="login" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp">
@@ -30,6 +39,7 @@ error_reporting(-1);
                 </div>
                 <button type="submit" class="btn btn-primary">Войти в Л/К</button>
             </form>
+            <a href="register.php">Зарегистрироваться</a>
         </div>
     </div>
 

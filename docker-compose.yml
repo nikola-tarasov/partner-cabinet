@@ -1,21 +1,26 @@
 version: "3"
 services:
         php:
-                build: ./
+                build: ./website
                 ports:
                         - 80:80
                 volumes:
-                        - .:/var/www/html
+                        - ./website:/var/www/html
+
 
 
 
         event-handler:
 
                 build: ./event-handler
+
                 volumes:
-                        - ./event-handler:/event-handler
+                        - ./event-handler:/root/event_handler
+
                 ports:
                         - 5000:5000
+
+
 
 
 
@@ -25,7 +30,10 @@ services:
                         - ./basedata:/var/lib/mysql
 
                 restart: always
+
+
                 environment:
+
                         MYSQL_ROOT_PASSWORD: example
 
 
